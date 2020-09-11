@@ -17,8 +17,8 @@ public class QuantiteServiceImpl implements IQuantiteService{
 	private IQuantiteDao qDao;
 
 	@Override
-	public void addQuantite(Quantite qIn) {
-		qDao.save(qIn);
+	public Quantite addQuantite(Quantite qIn) {
+		return qDao.save(qIn);
 	}
 
 	@Override
@@ -27,8 +27,8 @@ public class QuantiteServiceImpl implements IQuantiteService{
 	}
 
 	@Override
-	public void modQuantite(Quantite qIn) {
-		qDao.save(qIn);
+	public Quantite modQuantite(Quantite qIn) {
+		return qDao.save(qIn);
 	}
 
 	@Override

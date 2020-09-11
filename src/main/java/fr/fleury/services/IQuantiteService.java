@@ -6,9 +6,9 @@ import fr.fleury.entities.Quantite;
 
 public interface IQuantiteService {
 	
-	public void addQuantite(Quantite qIn);
+	public Quantite addQuantite(Quantite qIn);
 	public void delQuantite(int qId);
-	public void modQuantite(Quantite qIn);
+	public Quantite modQuantite(Quantite qIn);
 	
 	public Quantite getQuantiteById(int qId);
 	public List<Quantite> getAllQuantite(); //J'ai des doutes sur l'utilité de celle-ci...

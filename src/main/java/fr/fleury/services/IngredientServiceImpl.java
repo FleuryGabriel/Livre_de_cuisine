@@ -18,8 +18,8 @@ public class IngredientServiceImpl implements IIngredientService{
 	private IIngredientDao iDao;
 
 	@Override
-	public void addIngredient(Ingredient iIn) {
-		iDao.save(iIn);
+	public Ingredient addIngredient(Ingredient iIn) {
+		return iDao.save(iIn);
 	}
 
 	@Override
@@ -28,8 +28,8 @@ public class IngredientServiceImpl implements IIngredientService{
 	}
 
 	@Override
-	public void modIngredient(Ingredient iIn) {
-		iDao.save(iIn);
+	public Ingredient modIngredient(Ingredient iIn) {
+		return iDao.save(iIn);
 	}
 
 	@Override

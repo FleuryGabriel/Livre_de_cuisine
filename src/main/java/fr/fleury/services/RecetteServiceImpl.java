@@ -17,8 +17,8 @@ public class RecetteServiceImpl implements IRecetteService{
 	private IRecetteDao rDao;
 
 	@Override
-	public void addRecette(Recette rIn) {
-		rDao.save(rIn);
+	public Recette addRecette(Recette rIn) {
+		return rDao.save(rIn);
 	}
 
 	@Override
@@ -27,8 +27,8 @@ public class RecetteServiceImpl implements IRecetteService{
 	}
 
 	@Override
-	public void modRecette(Recette rIn) {
-		rDao.save(rIn);
+	public Recette modRecette(Recette rIn) {
+		return rDao.save(rIn);
 	}
 
 	@Override

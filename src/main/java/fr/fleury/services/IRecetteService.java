@@ -6,9 +6,9 @@ import fr.fleury.entities.Recette;
 
 public interface IRecetteService {
 	
-	public void addRecette(Recette rIn);
+	public Recette addRecette(Recette rIn);
 	public void delRecette(int rId);
-	public void modRecette(Recette rIn);
+	public Recette modRecette(Recette rIn);
 	
 	public Recette getRecetteById(int rId);
 	public List<Recette> getAllRecette();
