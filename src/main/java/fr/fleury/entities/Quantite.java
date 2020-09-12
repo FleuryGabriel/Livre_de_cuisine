@@ -19,8 +19,8 @@ public class Quantite implements Serializable{
 	@GeneratedValue
 	@Column(name = "id_q")
 	private int id;
-	private int no_recette;
-	private int no_ingredient;
+	private String no_recette;
+	private String no_ingredient;
 	private String quantite;
 	
 	//Lien UML
@@ -36,13 +36,13 @@ public class Quantite implements Serializable{
 	public Quantite() {
 		super();
 	}
-	public Quantite(int no_recette, int no_ingredient, String quantite) {
+	public Quantite(String no_recette, String no_ingredient, String quantite) {
 		super();
 		this.no_recette = no_recette;
 		this.no_ingredient = no_ingredient;
 		this.quantite = quantite;
 	}
-	public Quantite(int id, int no_recette, int no_ingredient, String quantite) {
+	public Quantite(int id, String no_recette, String no_ingredient, String quantite) {
 		super();
 		this.id = id;
 		this.no_recette = no_recette;
@@ -57,16 +57,16 @@ public class Quantite implements Serializable{
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getNo_recette() {
+	public String getNo_recette() {
 		return no_recette;
 	}
-	public void setNo_recette(int no_recette) {
+	public void setNo_recette(String no_recette) {
 		this.no_recette = no_recette;
 	}
-	public int getNo_ingredient() {
+	public String getNo_ingredient() {
 		return no_ingredient;
 	}
-	public void setNo_ingredient(int no_ingredient) {
+	public void setNo_ingredient(String no_ingredient) {
 		this.no_ingredient = no_ingredient;
 	}
 	public String getQuantite() {
