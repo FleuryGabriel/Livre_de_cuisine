@@ -54,5 +54,10 @@ public class IngredientRest {
 		// appel methode service
 		return iService.modIngredient(i);
 	}
+	
+	@GetMapping(value = "/getCle/{pCle}", produces = "application/json")
+	public List<Ingredient> getByCle(@PathVariable("pCle") String cle){
+		return iService.getByMotCle(cle);
+	}
 
 }

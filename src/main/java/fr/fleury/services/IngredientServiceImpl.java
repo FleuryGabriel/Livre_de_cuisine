@@ -43,4 +43,9 @@ public class IngredientServiceImpl implements IIngredientService{
 		return iDao.findAll();
 	}
 
+	@Override
+	public List<Ingredient> getByMotCle(String cle) {
+		return iDao.findByMotCle(cle);
+	}
+
 }

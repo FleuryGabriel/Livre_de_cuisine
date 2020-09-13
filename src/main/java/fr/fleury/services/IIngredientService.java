@@ -12,5 +12,7 @@ public interface IIngredientService {
 	
 	public Ingredient getIngredientById(int iId);
 	public List<Ingredient> getAllIngredient();
+	
+	public List<Ingredient> getByMotCle(String cle);
 
 }
