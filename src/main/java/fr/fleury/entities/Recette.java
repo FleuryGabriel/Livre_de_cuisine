@@ -25,6 +25,7 @@ public class Recette implements Serializable{
 	private String source; //D'où provient la recette
 	private String typePlat; //Entrée, plat, dessert...
 	private String lien; //Un lien vers la recette si elle est numérique
+	private int nbPersonnes; //Nombre de personnes pour qui cette recette est faite.
 
 	//Liens UML
 	
@@ -37,22 +38,24 @@ public class Recette implements Serializable{
 	}
 
 
-	public Recette(String nom, String source, String typePlat, String lien) {
+	public Recette(String nom, String source, String typePlat, String lien,int nbPersonnes) {
 		super();
 		this.nom = nom;
 		this.source = source;
 		this.typePlat = typePlat;
 		this.lien = lien;
+		this.nbPersonnes = nbPersonnes;
 	}
 
 
-	public Recette(int id, String nom, String source, String typePlat, String lien) {
+	public Recette(int id, String nom, String source, String typePlat, String lien, int nbPersonnes) {
 		super();
 		this.id = id;
 		this.nom = nom;
 		this.source = source;
 		this.typePlat = typePlat;
 		this.lien = lien;
+		this.nbPersonnes = nbPersonnes;
 	}
 
 	//Getters et setters
@@ -113,6 +116,16 @@ public class Recette implements Serializable{
 
 	public void setComposants(List<Quantite> composants) {
 		this.composants = composants;
+	}
+
+
+	public int getNbPersonnes() {
+		return nbPersonnes;
+	}
+
+
+	public void setNbPersonnes(int nbPersonnes) {
+		this.nbPersonnes = nbPersonnes;
 	}
 	
 	

@@ -21,7 +21,8 @@ public class Quantite implements Serializable{
 	private int id;
 	private String no_recette;
 	private String no_ingredient;
-	private String quantite;
+	private int quantite;
+	private String unite;
 	
 	//Lien UML
 	@ManyToOne
@@ -36,13 +37,14 @@ public class Quantite implements Serializable{
 	public Quantite() {
 		super();
 	}
-	public Quantite(String no_recette, String no_ingredient, String quantite) {
+	public Quantite(String no_recette, String no_ingredient, int quantite, String unite) {
 		super();
 		this.no_recette = no_recette;
 		this.no_ingredient = no_ingredient;
 		this.quantite = quantite;
+		this.unite = unite;
 	}
-	public Quantite(int id, String no_recette, String no_ingredient, String quantite) {
+	public Quantite(int id, String no_recette, String no_ingredient, int quantite, String unite) {
 		super();
 		this.id = id;
 		this.no_recette = no_recette;
@@ -69,10 +71,10 @@ public class Quantite implements Serializable{
 	public void setNo_ingredient(String no_ingredient) {
 		this.no_ingredient = no_ingredient;
 	}
-	public String getQuantite() {
+	public int getQuantite() {
 		return quantite;
 	}
-	public void setQuantite(String quantite) {
+	public void setQuantite(int quantite) {
 		this.quantite = quantite;
 	}
 	public Recette getRecette() {
@@ -87,6 +89,13 @@ public class Quantite implements Serializable{
 	public void setIngredient(Ingredient ingredient) {
 		this.ingredient = ingredient;
 	}
+	public String getUnite() {
+		return unite;
+	}
+	public void setUnite(String unite) {
+		this.unite = unite;
+	}
+	
 	
 	
 	
