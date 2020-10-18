@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import fr.fleury.dao.IRecetteDao;
+import fr.fleury.entities.Ingredient;
 import fr.fleury.entities.Recette;
 
 @Service
@@ -40,6 +41,11 @@ public class RecetteServiceImpl implements IRecetteService{
 	@Override
 	public List<Recette> getAllRecette() {
 		return rDao.findAll();
+	}
+
+	@Override
+	public List<Ingredient> getIngredients() {
+		return rDao.getIngredients();
 	}
 
 }

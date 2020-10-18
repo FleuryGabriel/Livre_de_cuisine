@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import fr.fleury.entities.Ingredient;
 import fr.fleury.entities.Recette;
 import fr.fleury.services.IRecetteService;
 
@@ -53,6 +54,11 @@ public class RecetteRest {
 	public Recette updateEtudiant(@RequestBody Recette r) {
 		// appel methode service
 		return rService.modRecette(r);
+	}
+	
+	@GetMapping(value = "/ingr", produces = "application/json")
+	public List<Ingredient> getIngredients(){
+		return rService.getIngredients();
 	}
 
 }

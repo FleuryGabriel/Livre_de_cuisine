@@ -2,6 +2,7 @@ package fr.fleury.services;
 
 import java.util.List;
 
+import fr.fleury.entities.Ingredient;
 import fr.fleury.entities.Recette;
 
 public interface IRecetteService {
@@ -12,5 +13,7 @@ public interface IRecetteService {
 	
 	public Recette getRecetteById(int rId);
 	public List<Recette> getAllRecette();
+	
+	public List<Ingredient> getIngredients();
 
 }
