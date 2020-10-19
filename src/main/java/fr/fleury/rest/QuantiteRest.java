@@ -54,5 +54,10 @@ public class QuantiteRest {
 		// appel methode service
 		return qService.modQuantite(q);
 	}
+	
+	@GetMapping(value="/rec/{id}", produces= "application/json")
+	public List<Quantite> getQuantiteByRecette(@PathVariable("id") int id){
+		return qService.getQuantiteByRecette(id);
+	}
 
 }

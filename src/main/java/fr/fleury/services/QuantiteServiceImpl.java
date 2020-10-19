@@ -42,4 +42,9 @@ public class QuantiteServiceImpl implements IQuantiteService{
 		return qDao.findAll();
 	}
 
+	@Override
+	public List<Quantite> getQuantiteByRecette(int id) {
+		return qDao.getQuantiteByRecette(id);
+	}
+
 }

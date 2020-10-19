@@ -11,14 +11,19 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "ingredients")
 public class Ingredient implements Serializable{
 	
 	//Attributs
 	
+
+	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_i")
 	private int id;
 	private String nom;
@@ -27,6 +32,7 @@ public class Ingredient implements Serializable{
 	//Lien UML
 	
 	@OneToMany(mappedBy = "ingredient")
+	@JsonIgnore
 	private List<Quantite> quantites;
 	
 	//Constructeurs

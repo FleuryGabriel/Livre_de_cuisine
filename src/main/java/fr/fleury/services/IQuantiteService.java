@@ -11,7 +11,9 @@ public interface IQuantiteService {
 	public Quantite modQuantite(Quantite qIn);
 	
 	public Quantite getQuantiteById(int qId);
-	public List<Quantite> getAllQuantite(); //J'ai des doutes sur l'utilité de celle-ci...
+	public List<Quantite> getAllQuantite();
+	
+	public List<Quantite> getQuantiteByRecette(int id);
 	
 
 }

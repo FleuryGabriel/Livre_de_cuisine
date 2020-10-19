@@ -56,9 +56,5 @@ public class RecetteRest {
 		return rService.modRecette(r);
 	}
 	
-	@GetMapping(value = "/ingr", produces = "application/json")
-	public List<Ingredient> getIngredients(){
-		return rService.getIngredients();
-	}
 
 }

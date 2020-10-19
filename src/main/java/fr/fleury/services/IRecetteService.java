@@ -14,6 +14,5 @@ public interface IRecetteService {
 	public Recette getRecetteById(int rId);
 	public List<Recette> getAllRecette();
 	
-	public List<Ingredient> getIngredients();
 
 }

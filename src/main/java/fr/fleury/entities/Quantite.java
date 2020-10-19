@@ -11,10 +11,14 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "quantites")
 public class Quantite implements Serializable{
 	
+
+	private static final long serialVersionUID = 1L;
 	//Attributs
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +26,7 @@ public class Quantite implements Serializable{
 	private int id;
 	private String no_recette;
 	private String no_ingredient;
-	private int quantite;
+	private int dose;
 	private String unite;
 	
 	//Lien UML
@@ -38,19 +42,19 @@ public class Quantite implements Serializable{
 	public Quantite() {
 		super();
 	}
-	public Quantite(String no_recette, String no_ingredient, int quantite, String unite) {
+	public Quantite(String no_recette, String no_ingredient, int dose, String unite) {
 		super();
 		this.no_recette = no_recette;
 		this.no_ingredient = no_ingredient;
-		this.quantite = quantite;
+		this.dose = dose;
 		this.unite = unite;
 	}
-	public Quantite(int id, String no_recette, String no_ingredient, int quantite, String unite) {
+	public Quantite(int id, String no_recette, String no_ingredient, int dose, String unite) {
 		super();
 		this.id = id;
 		this.no_recette = no_recette;
 		this.no_ingredient = no_ingredient;
-		this.quantite = quantite;
+		this.dose = dose;
 	}
 	
 	//Getters et setters
@@ -72,12 +76,13 @@ public class Quantite implements Serializable{
 	public void setNo_ingredient(String no_ingredient) {
 		this.no_ingredient = no_ingredient;
 	}
-	public int getQuantite() {
-		return quantite;
+	public int getDose() {
+		return dose;
 	}
-	public void setQuantite(int quantite) {
-		this.quantite = quantite;
+	public void setDose(int dose) {
+		this.dose = dose;
 	}
+	
 	public Recette getRecette() {
 		return recette;
 	}

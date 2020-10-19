@@ -43,9 +43,5 @@ public class RecetteServiceImpl implements IRecetteService{
 		return rDao.findAll();
 	}
 
-	@Override
-	public List<Ingredient> getIngredients() {
-		return rDao.getIngredients();
-	}
 
 }

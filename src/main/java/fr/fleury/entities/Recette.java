@@ -11,14 +11,18 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "recettes")
 public class Recette implements Serializable{
 	
 	//Attributs
-	
+
+	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_r")
 	private int id;
 	private String nom;
@@ -109,6 +113,7 @@ public class Recette implements Serializable{
 	}
 
 
+	@JsonIgnore
 	public List<Quantite> getComposants() {
 		return composants;
 	}
