@@ -26,7 +26,7 @@ public class Quantite implements Serializable{
 	private int id;
 	private String no_recette;
 	private String no_ingredient;
-	private int dose;
+	private double dose;
 	private String unite;
 	
 	//Lien UML
@@ -76,10 +76,10 @@ public class Quantite implements Serializable{
 	public void setNo_ingredient(String no_ingredient) {
 		this.no_ingredient = no_ingredient;
 	}
-	public int getDose() {
+	public double getDose() {
 		return dose;
 	}
-	public void setDose(int dose) {
+	public void setDose(double dose) {
 		this.dose = dose;
 	}
 	
