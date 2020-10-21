@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.fleury.entities.Ingredient;
 import fr.fleury.entities.Recette;
 import fr.fleury.services.IRecetteService;
 
@@ -54,6 +53,16 @@ public class RecetteRest {
 	public Recette updateEtudiant(@RequestBody Recette r) {
 		// appel methode service
 		return rService.modRecette(r);
+	}
+	
+	@GetMapping(value="/getCle/{pCle}")
+	public List<Recette> findByMotCle(@PathVariable("pCle") String cle){
+		return rService.findByMotCle(cle);
+	}
+	
+	@GetMapping(value = "/getIngr/{id}")
+	public List<Recette> findByIngredient(@PathVariable("id") int id){
+		return rService.findByIngredient(id);
 	}
 	
 

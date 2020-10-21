@@ -1,13 +1,3 @@
- - Adapter les quantités de la liste de course au nombre de personnes.
- 
- - Faire en sorte qu'il n'y ait pas de doublons dans la liste de course.
- 
- - Ajouter la fonctionnalité trouver recette à partir d'ingrédients.
- 
- - Régler le problème du double clic sur le bouton de génération de liste de course. 
- 
- - Corriger la redirection de la modif-quantite.
- 
  - Trouver un moyen de faciliter la recherche d'ingrédient à ajouter dans une recette.
  
  - Ajouter des images des plats.

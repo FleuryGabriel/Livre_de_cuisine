@@ -43,5 +43,15 @@ public class RecetteServiceImpl implements IRecetteService{
 		return rDao.findAll();
 	}
 
+	@Override
+	public List<Recette> findByMotCle(String cle) {
+		return rDao.findByMotCle(cle);
+	}
+
+	@Override
+	public List<Recette> findByIngredient(int id) {
+		return rDao.findByIngredient(id);
+	}
+
 
 }
