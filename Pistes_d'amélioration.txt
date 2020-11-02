@@ -1,3 +1,5 @@
+- Faire la liste en back.
+
  - Trouver un moyen de faciliter la recherche d'ingrédient à ajouter dans une recette.
  
  - Ajouter des images des plats.
