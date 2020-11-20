@@ -1,5 +1,10 @@
+<<<<<<< HEAD
  - Liste de course : mettre par défaut les quantités enregistrées. 
  
+=======
+- Faire la liste en back.
+
+>>>>>>> 236502283286b331a94a6682fba0ed0578f692a8
  - Trouver un moyen de faciliter la recherche d'ingrédient à ajouter dans une recette.
  
  - Régler l'affichage des unités multiples dans la liste. 

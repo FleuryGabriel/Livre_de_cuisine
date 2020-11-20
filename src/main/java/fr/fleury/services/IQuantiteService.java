@@ -1,8 +1,10 @@
 package fr.fleury.services;
 
 import java.util.List;
+import java.util.Map;
 
 import fr.fleury.entities.Quantite;
+import fr.fleury.entities.Recette;
 
 public interface IQuantiteService {
 	
@@ -14,6 +16,8 @@ public interface IQuantiteService {
 	public List<Quantite> getAllQuantite();
 	
 	public List<Quantite> getQuantiteByRecette(int id);
+	
+	public List<Quantite> genererListe(Map<Recette, Integer> repas);
 	
 
 }
