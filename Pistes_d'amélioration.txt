@@ -1,3 +1,7 @@
+ - Liste de course : mettre par défaut les quantités enregistrées. 
+ 
  - Trouver un moyen de faciliter la recherche d'ingrédient à ajouter dans une recette.
+ 
+ - Régler l'affichage des unités multiples dans la liste. 
  
  - Ajouter des images des plats.
