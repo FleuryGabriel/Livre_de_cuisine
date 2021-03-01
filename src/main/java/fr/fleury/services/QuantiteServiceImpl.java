@@ -1,9 +1,12 @@
 package fr.fleury.services;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,9 +16,9 @@ import fr.fleury.entities.Quantite;
 import fr.fleury.entities.Recette;
 
 @Service
-public class QuantiteServiceImpl implements IQuantiteService{
-	
-	//Lien UML
+public class QuantiteServiceImpl implements IQuantiteService {
+
+	// Lien UML
 	@Autowired
 	private IQuantiteDao qDao;
 
@@ -51,18 +54,39 @@ public class QuantiteServiceImpl implements IQuantiteService{
 	}
 
 	@Override
-	public List<Quantite> genererListe(Map<Recette, Integer> repas) {
+	public Map<String, Double> genererListe(Map<Recette, Integer> repas) {
 
-		List<Quantite> listeCourse = new ArrayList<Quantite>();
-		
-		//Ajustement des dosages à la demande de l'utilisateur
-		for(Recette r:repas.keySet()) {
-			if(r.getNbPersonnes()!=repas.get(r)) {
-				double coef = repas.get(r)/r.getNbPersonnes();
+		Map<String, Integer> listeCourse = new HashMap<String, Integer>();
+
+		// Ajustement des dosages à la demande de l'utilisateur
+		for (Recette r : repas.keySet()) {
+			if (r.getNbPersonnes() != repas.get(r)) {
+				double coef = repas.get(r) / r.getNbPersonnes();
+				for (Quantite q : r.getComposants()) {
+					q.setDose(q.getDose() * coef);
+				}
 			}
-			
 		}
-		
+
+		// Remplissage d'un set des ingrédients présents dans la liste de course.
+		Set<String> ingredientCourse = new HashSet<String>();
+		for (Recette r : repas.keySet()) {
+			for (Quantite q : r.getComposants()) {
+				ingredientCourse.add(q.getNo_ingredient());
+			}
+		}
+
+		for (String s : ingredientCourse) {
+			listeCourse.put(s, 0);
+			for (Recette r : repas.keySet()) {
+				for (Quantite q : r.getComposants()) {
+					if (q.getNo_recette().equals(s)) {
+						//Compléter
+					}
+				}
+			}
+		}
+
 		return null;
 	}
 

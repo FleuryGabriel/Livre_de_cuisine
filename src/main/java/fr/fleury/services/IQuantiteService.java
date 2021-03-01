@@ -17,7 +17,7 @@ public interface IQuantiteService {
 	
 	public List<Quantite> getQuantiteByRecette(int id);
 	
-	public List<Quantite> genererListe(Map<Recette, Integer> repas);
+	public Map<String, Double> genererListe(Map<Recette, Integer> repas);
 	
 
 }
